@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b5aae583-7a34-4605-9d9f-c641208e9fac</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>class.py</StartupFile>
+    <StartupFile>gui test\Ticket System.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,43 +21,93 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="class.py">
+    <Compile Include="basic_test\dbconnect_class.py" />
+    <Compile Include="basic_test\json.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="condiction.py">
+    <Compile Include="basic_test\map.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="dbconnect.py">
+    <Compile Include="basic_test\start.py" />
+    <Compile Include="basic_test\class_op.py" />
+    <Compile Include="basic_test\class.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="dictionary.py">
+    <Compile Include="basic_test\condiction.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="file.py">
+    <Compile Include="basic_test\dbconnect.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="first.py" />
-    <Compile Include="function.py">
+    <Compile Include="basic_test\dictionary.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="global_local.py">
+    <Compile Include="basic_test\file.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="main.py">
+    <Compile Include="basic_test\first.py" />
+    <Compile Include="basic_test\function.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="math.py">
+    <Compile Include="basic_test\global_local.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="string.py">
+    <Compile Include="basic_test\main.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="tuple.py">
+    <Compile Include="basic_test\math.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="var.py">
+    <Compile Include="basic_test\string.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="basic_test\thread.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="basic_test\tuple.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="basic_test\var.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui test\button_entry.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui test\callback.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui test\check.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui test\dbconnect_class2.py" />
+    <Compile Include="gui test\frame.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui test\grid.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui test\list_ticket.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui test\login.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui test\Tic Tac Gameing.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui test\Ticket System.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui test\tree.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="basic_test\" />
+    <Folder Include="gui test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gui test\test.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
