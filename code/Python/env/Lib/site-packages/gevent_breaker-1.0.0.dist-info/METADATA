@@ -1,0 +1,73 @@
+Metadata-Version: 2.0
+Name: gevent-breaker
+Version: 1.0.0
+Summary: Circuitbreaker pattern for gevent apps
+Home-page: http://github.com/daroot/gevent-breaker
+Author: Dan Root
+Author-email: rootdan+pypi@gmail.com
+License: WTFPL
+Keywords: pytest,consul
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: Freely Distributable
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: gevent
+Provides-Extra: all
+Requires-Dist: gevent; extra == 'all'
+Requires-Dist: pytest; extra == 'all'
+Requires-Dist: pytest-cov; extra == 'all'
+Requires-Dist: pytest-flake8; extra == 'all'
+Requires-Dist: requests; extra == 'all'
+Provides-Extra: install
+Requires-Dist: gevent; extra == 'install'
+Provides-Extra: setup
+Provides-Extra: tests
+Requires-Dist: pytest; extra == 'tests'
+Requires-Dist: pytest-cov; extra == 'tests'
+Requires-Dist: pytest-flake8; extra == 'tests'
+Requires-Dist: requests; extra == 'tests'
+
+gevent-breaker
+==============
+
+[![Build Status](https://travis-ci.org/daroot/gevent-breaker.svg?branch=1.0.0)](https://travis-ci.org/daroot/gevent-breaker)
+
+Circuit Breaker pattern for gevent apps.
+
+Install
+-------
+
+   $ pip install gevent-breaker
+
+Usage
+-----
+
+```python
+from gevent_breaker import circuit_breaker, CircuitBroken
+while True:
+	try:
+        # After enough errors (5 by default), raise a CircuitBroken
+		with circuit_breaker("breaker1"):
+			1/0
+	except ZeroDivisionError:
+		print("Got an exception!")
+	except CircuitBroken:
+        print("Too many errors!")
+		break
+
+try:
+    # Don't raise a CircuitBroken, instead just wait for a period
+	# of time (default 60s) before trying again.
+    with circuit_breaker("breaker2", block=True):
+        1/0
+	except ZeroDivisionError:
+        print("Got an exception")
+```
+
+
